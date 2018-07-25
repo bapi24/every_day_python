@@ -34,7 +34,9 @@ class yaml_parser:
         return content
     
     def _get_config(self, content):
-        print(f"The contents of config are: {content}")
+        for k, v in content.items():
+            print(k)
+        # print(f"The contents of config are: {content}")
 
 yp = yaml_parser()
 content = yp._read_config()
