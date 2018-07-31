@@ -1,4 +1,4 @@
 ---
-vcpu: 2
+vcpus: 32
 memory: 8000
 image: '504441953050.dkr.ecr.us-east-1.amazonaws.com/axiom-staging:abcfinewine'
