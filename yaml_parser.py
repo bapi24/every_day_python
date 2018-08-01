@@ -22,9 +22,10 @@ print(content)
 
 # method 3
 class yaml_parser:
+
     def __init__(self):
         self._config_file = 'config.yml'
-        dict1 = {}
+        # self._config_file_present = True
     
     def _read_config(self):
         filename = self._config_file
@@ -36,10 +37,10 @@ class yaml_parser:
     
     def _get_config(self, content):
         for k, v in content.items():
-            print(k)
+            print(f'key: {k}\t value: {v}')
         # print(f"The contents of config are: {content}")
 
-    def _check_config(self, content):
+    # def _check_config(self, content):
         
 
 yp = yaml_parser()
