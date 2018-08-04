@@ -11,11 +11,6 @@ with open('config.yml') as f:
 print(content)
 #get dict2
 response = mybatch.describe_job_definitions(
-    # jobDefinitions=[
-    #     content['jobName']
-    #     # 'axiom-staging-abcfinewine:1'
-    #     # 'axiom-staging-costco:1'
-    # ],
     jobDefinitionName=content['jobName'],
     # status='ACTIVE'
 )
@@ -23,13 +18,13 @@ response = mybatch.describe_job_definitions(
 # pprint.pprint(response)
 
 
-pprint.pprint(response['jobDefinitions'][0])
+pprint.pprint(response['jobDefinitions'][0]['containerProperties'])
 
 
-for k, v in response['jobDefinitions']:
-    # pprint.pprint(v) #to print container properties
-    # pprint.pprint(v[0]['containerProperties'])
-    pprint.pprint(response)
+# for k, v in response['jobDefinitions']:
+#     # pprint.pprint(v) #to print container properties
+#     # pprint.pprint(v[0]['containerProperties'])
+#     pprint.pprint(response) 
 
 
 '''
