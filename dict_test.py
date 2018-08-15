@@ -18,3 +18,4 @@ list1 = [
 
 for i in list1:
     print(f"sum: {sum(i['numbers'])}")
+
